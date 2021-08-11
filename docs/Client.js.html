@@ -1,0 +1,1042 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: Client.js | whatsapp-web.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">whatsapp-web.js</a></h1>
+        
+            <span class="version">v1.12.5</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Base.html">Base</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Base_sub"></div></li><li><a href="BusinessContact.html">BusinessContact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="BusinessContact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="BusinessContact.html#businessProfile">businessProfile</a></li><li><a href="BusinessContact.html#id">id</a></li><li><a href="BusinessContact.html#isBlocked">isBlocked</a></li><li><a href="BusinessContact.html#isBusiness">isBusiness</a></li><li><a href="BusinessContact.html#isEnterprise">isEnterprise</a></li><li><a href="BusinessContact.html#isGroup">isGroup</a></li><li><a href="BusinessContact.html#isMe">isMe</a></li><li><a href="BusinessContact.html#isMyContact">isMyContact</a></li><li><a href="BusinessContact.html#isUser">isUser</a></li><li><a href="BusinessContact.html#isWAContact">isWAContact</a></li><li><a href="BusinessContact.html#name">name</a></li><li><a href="BusinessContact.html#number">number</a></li><li><a href="BusinessContact.html#pushname">pushname</a></li><li><a href="BusinessContact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="BusinessContact.html#block">block</a></li><li><a href="BusinessContact.html#getAbout">getAbout</a></li><li><a href="BusinessContact.html#getChat">getChat</a></li><li><a href="BusinessContact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="BusinessContact.html#unblock">unblock</a></li></ul></div></li><li><a href="Chat.html">Chat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Chat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Chat.html#archived">archived</a></li><li><a href="Chat.html#id">id</a></li><li><a href="Chat.html#isGroup">isGroup</a></li><li><a href="Chat.html#isMuted">isMuted</a></li><li><a href="Chat.html#isReadOnly">isReadOnly</a></li><li><a href="Chat.html#muteExpiration">muteExpiration</a></li><li><a href="Chat.html#name">name</a></li><li><a href="Chat.html#pinned">pinned</a></li><li><a href="Chat.html#timestamp">timestamp</a></li><li><a href="Chat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Chat.html#archive">archive</a></li><li><a href="Chat.html#clearMessages">clearMessages</a></li><li><a href="Chat.html#clearState">clearState</a></li><li><a href="Chat.html#delete">delete</a></li><li><a href="Chat.html#fetchMessages">fetchMessages</a></li><li><a href="Chat.html#getContact">getContact</a></li><li><a href="Chat.html#getLabels">getLabels</a></li><li><a href="Chat.html#loadMessage">loadMessage</a></li><li><a href="Chat.html#markUnread">markUnread</a></li><li><a href="Chat.html#mute">mute</a></li><li><a href="Chat.html#pin">pin</a></li><li><a href="Chat.html#sendMessage">sendMessage</a></li><li><a href="Chat.html#sendSeen">sendSeen</a></li><li><a href="Chat.html#sendStateRecording">sendStateRecording</a></li><li><a href="Chat.html#sendStateTyping">sendStateTyping</a></li><li><a href="Chat.html#unarchive">unarchive</a></li><li><a href="Chat.html#unmute">unmute</a></li><li><a href="Chat.html#unpin">unpin</a></li></ul></div></li><li><a href="ChatFactory.html">ChatFactory</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ChatFactory_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ChatFactory.html#.create">create</a></li></ul></div></li><li><a href="Client.html">Client</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Client_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Client.html#info">info</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Client.html#acceptInvite">acceptInvite</a></li><li><a href="Client.html#archiveChat">archiveChat</a></li><li><a href="Client.html#createGroup">createGroup</a></li><li><a href="Client.html#destroy">destroy</a></li><li><a href="Client.html#getChatById">getChatById</a></li><li><a href="Client.html#getChatLabels">getChatLabels</a></li><li><a href="Client.html#getChats">getChats</a></li><li><a href="Client.html#getChatsByLabelId">getChatsByLabelId</a></li><li><a href="Client.html#getContactById">getContactById</a></li><li><a href="Client.html#getContacts">getContacts</a></li><li><a href="Client.html#getInviteInfo">getInviteInfo</a></li><li><a href="Client.html#getLabelById">getLabelById</a></li><li><a href="Client.html#getLabels">getLabels</a></li><li><a href="Client.html#getNumberId">getNumberId</a></li><li><a href="Client.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="Client.html#getState">getState</a></li><li><a href="Client.html#getWWebVersion">getWWebVersion</a></li><li><a href="Client.html#initialize">initialize</a></li><li><a href="Client.html#isRegisteredUser">isRegisteredUser</a></li><li><a href="Client.html#logout">logout</a></li><li><a href="Client.html#markChatUnread">markChatUnread</a></li><li><a href="Client.html#muteChat">muteChat</a></li><li><a href="Client.html#pinChat">pinChat</a></li><li><a href="Client.html#resetState">resetState</a></li><li><a href="Client.html#sendMessage">sendMessage</a></li><li><a href="Client.html#sendPresenceAvailable">sendPresenceAvailable</a></li><li><a href="Client.html#sendSeen">sendSeen</a></li><li><a href="Client.html#setDisplayName">setDisplayName</a></li><li><a href="Client.html#setStatus">setStatus</a></li><li><a href="Client.html#unarchiveChat">unarchiveChat</a></li><li><a href="Client.html#unmuteChat">unmuteChat</a></li><li><a href="Client.html#unpinChat">unpinChat</a></li></ul><div class="member-type">Events</div><ul class="inner"><li><a href="Client.html#event:auth_failure">auth_failure</a></li><li><a href="Client.html#event:authenticated">authenticated</a></li><li><a href="Client.html#event:change_battery">change_battery</a></li><li><a href="Client.html#event:change_state">change_state</a></li><li><a href="Client.html#event:disconnected">disconnected</a></li><li><a href="Client.html#event:group_join">group_join</a></li><li><a href="Client.html#event:group_leave">group_leave</a></li><li><a href="Client.html#event:group_update">group_update</a></li><li><a href="Client.html#event:media_uploaded">media_uploaded</a></li><li><a href="Client.html#event:message">message</a></li><li><a href="Client.html#event:message_ack">message_ack</a></li><li><a href="Client.html#event:message_create">message_create</a></li><li><a href="Client.html#event:message_revoke_everyone">message_revoke_everyone</a></li><li><a href="Client.html#event:message_revoke_me">message_revoke_me</a></li><li><a href="Client.html#event:qr">qr</a></li><li><a href="Client.html#event:ready">ready</a></li></ul></div></li><li><a href="ClientInfo.html">ClientInfo</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ClientInfo_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="ClientInfo.html#me">me</a></li><li><a href="ClientInfo.html#phone">phone</a></li><li><a href="ClientInfo.html#platform">platform</a></li><li><a href="ClientInfo.html#pushname">pushname</a></li><li><a href="ClientInfo.html#wid">wid</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="ClientInfo.html#getBatteryStatus">getBatteryStatus</a></li></ul></div></li><li><a href="Contact.html">Contact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Contact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Contact.html#id">id</a></li><li><a href="Contact.html#isBlocked">isBlocked</a></li><li><a href="Contact.html#isBusiness">isBusiness</a></li><li><a href="Contact.html#isEnterprise">isEnterprise</a></li><li><a href="Contact.html#isGroup">isGroup</a></li><li><a href="Contact.html#isMe">isMe</a></li><li><a href="Contact.html#isMyContact">isMyContact</a></li><li><a href="Contact.html#isUser">isUser</a></li><li><a href="Contact.html#isWAContact">isWAContact</a></li><li><a href="Contact.html#name">name</a></li><li><a href="Contact.html#number">number</a></li><li><a href="Contact.html#pushname">pushname</a></li><li><a href="Contact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Contact.html#block">block</a></li><li><a href="Contact.html#getAbout">getAbout</a></li><li><a href="Contact.html#getChat">getChat</a></li><li><a href="Contact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="Contact.html#unblock">unblock</a></li></ul></div></li><li><a href="ContactFactory.html">ContactFactory</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ContactFactory_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ContactFactory.html#.create">create</a></li></ul></div></li><li><a href="GroupChat.html">GroupChat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="GroupChat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="GroupChat.html#archived">archived</a></li><li><a href="GroupChat.html#createdAt">createdAt</a></li><li><a href="GroupChat.html#description">description</a></li><li><a href="GroupChat.html#id">id</a></li><li><a href="GroupChat.html#isGroup">isGroup</a></li><li><a href="GroupChat.html#isMuted">isMuted</a></li><li><a href="GroupChat.html#isReadOnly">isReadOnly</a></li><li><a href="GroupChat.html#muteExpiration">muteExpiration</a></li><li><a href="GroupChat.html#name">name</a></li><li><a href="GroupChat.html#owner">owner</a></li><li><a href="GroupChat.html#participants">participants</a></li><li><a href="GroupChat.html#pinned">pinned</a></li><li><a href="GroupChat.html#timestamp">timestamp</a></li><li><a href="GroupChat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="GroupChat.html#addParticipants">addParticipants</a></li><li><a href="GroupChat.html#archive">archive</a></li><li><a href="GroupChat.html#clearMessages">clearMessages</a></li><li><a href="GroupChat.html#clearState">clearState</a></li><li><a href="GroupChat.html#delete">delete</a></li><li><a href="GroupChat.html#demoteParticipants">demoteParticipants</a></li><li><a href="GroupChat.html#fetchMessages">fetchMessages</a></li><li><a href="GroupChat.html#getContact">getContact</a></li><li><a href="GroupChat.html#getInviteCode">getInviteCode</a></li><li><a href="GroupChat.html#getLabels">getLabels</a></li><li><a href="GroupChat.html#leave">leave</a></li><li><a href="GroupChat.html#loadMessage">loadMessage</a></li><li><a href="GroupChat.html#markUnread">markUnread</a></li><li><a href="GroupChat.html#mute">mute</a></li><li><a href="GroupChat.html#pin">pin</a></li><li><a href="GroupChat.html#promoteParticipants">promoteParticipants</a></li><li><a href="GroupChat.html#removeParticipants">removeParticipants</a></li><li><a href="GroupChat.html#revokeInvite">revokeInvite</a></li><li><a href="GroupChat.html#sendMessage">sendMessage</a></li><li><a href="GroupChat.html#sendSeen">sendSeen</a></li><li><a href="GroupChat.html#sendStateRecording">sendStateRecording</a></li><li><a href="GroupChat.html#sendStateTyping">sendStateTyping</a></li><li><a href="GroupChat.html#setDescription">setDescription</a></li><li><a href="GroupChat.html#setInfoAdminsOnly">setInfoAdminsOnly</a></li><li><a href="GroupChat.html#setMessagesAdminsOnly">setMessagesAdminsOnly</a></li><li><a href="GroupChat.html#setSubject">setSubject</a></li><li><a href="GroupChat.html#unarchive">unarchive</a></li><li><a href="GroupChat.html#unmute">unmute</a></li><li><a href="GroupChat.html#unpin">unpin</a></li></ul></div></li><li><a href="GroupNotification.html">GroupNotification</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="GroupNotification_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="GroupNotification.html#author">author</a></li><li><a href="GroupNotification.html#body">body</a></li><li><a href="GroupNotification.html#chatId">chatId</a></li><li><a href="GroupNotification.html#id">id</a></li><li><a href="GroupNotification.html#recipientIds">recipientIds</a></li><li><a href="GroupNotification.html#timestamp">timestamp</a></li><li><a href="GroupNotification.html#type">type</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="GroupNotification.html#getChat">getChat</a></li><li><a href="GroupNotification.html#getContact">getContact</a></li><li><a href="GroupNotification.html#getRecipients">getRecipients</a></li><li><a href="GroupNotification.html#reply">reply</a></li></ul></div></li><li><a href="InterfaceController.html">InterfaceController</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="InterfaceController_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="InterfaceController.html#closeRightDrawer">closeRightDrawer</a></li><li><a href="InterfaceController.html#openChatDrawer">openChatDrawer</a></li><li><a href="InterfaceController.html#openChatSearch">openChatSearch</a></li><li><a href="InterfaceController.html#openChatWindow">openChatWindow</a></li><li><a href="InterfaceController.html#openChatWindowAt">openChatWindowAt</a></li><li><a href="InterfaceController.html#openMessageDrawer">openMessageDrawer</a></li></ul></div></li><li><a href="Label.html">Label</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Label_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Label.html#hexColor">hexColor</a></li><li><a href="Label.html#id">id</a></li><li><a href="Label.html#name">name</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Label.html#getChats">getChats</a></li></ul></div></li><li><a href="Location.html">Location</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Location_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Location.html#description">description</a></li><li><a href="Location.html#latitude">latitude</a></li><li><a href="Location.html#longitude">longitude</a></li></ul></div></li><li><a href="Message.html">Message</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Message_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Message.html#ack">ack</a></li><li><a href="Message.html#author">author</a></li><li><a href="Message.html#body">body</a></li><li><a href="Message.html#broadcast">broadcast</a></li><li><a href="Message.html#from">from</a></li><li><a href="Message.html#fromMe">fromMe</a></li><li><a href="Message.html#hasMedia">hasMedia</a></li><li><a href="Message.html#hasQuotedMsg">hasQuotedMsg</a></li><li><a href="Message.html#id">id</a></li><li><a href="Message.html#isForwarded">isForwarded</a></li><li><a href="Message.html#isStarred">isStarred</a></li><li><a href="Message.html#isStatus">isStatus</a></li><li><a href="Message.html#links">links</a></li><li><a href="Message.html#location">location</a></li><li><a href="Message.html#mediaKey">mediaKey</a></li><li><a href="Message.html#mentionedIds">mentionedIds</a></li><li><a href="Message.html#timestamp">timestamp</a></li><li><a href="Message.html#to">to</a></li><li><a href="Message.html#type">type</a></li><li><a href="Message.html#vCards">vCards</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Message.html#delete">delete</a></li><li><a href="Message.html#downloadMedia">downloadMedia</a></li><li><a href="Message.html#forward">forward</a></li><li><a href="Message.html#getChat">getChat</a></li><li><a href="Message.html#getChatId">getChatId</a></li><li><a href="Message.html#getContact">getContact</a></li><li><a href="Message.html#getInfo">getInfo</a></li><li><a href="Message.html#getMentions">getMentions</a></li><li><a href="Message.html#getQuotedMessage">getQuotedMessage</a></li><li><a href="Message.html#reply">reply</a></li><li><a href="Message.html#star">star</a></li><li><a href="Message.html#unstar">unstar</a></li></ul></div></li><li><a href="MessageMedia.html">MessageMedia</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="MessageMedia_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="MessageMedia.html#data">data</a></li><li><a href="MessageMedia.html#filename">filename</a></li><li><a href="MessageMedia.html#mimetype">mimetype</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="MessageMedia.html#.fromDataUri">fromDataUri</a></li><li><a href="MessageMedia.html#.fromFilePath">fromFilePath</a></li><li><a href="MessageMedia.html#getDataUri">getDataUri</a></li></ul></div></li><li><a href="PrivateChat.html">PrivateChat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PrivateChat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="PrivateChat.html#archived">archived</a></li><li><a href="PrivateChat.html#id">id</a></li><li><a href="PrivateChat.html#isGroup">isGroup</a></li><li><a href="PrivateChat.html#isMuted">isMuted</a></li><li><a href="PrivateChat.html#isReadOnly">isReadOnly</a></li><li><a href="PrivateChat.html#muteExpiration">muteExpiration</a></li><li><a href="PrivateChat.html#name">name</a></li><li><a href="PrivateChat.html#pinned">pinned</a></li><li><a href="PrivateChat.html#timestamp">timestamp</a></li><li><a href="PrivateChat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="PrivateChat.html#archive">archive</a></li><li><a href="PrivateChat.html#clearMessages">clearMessages</a></li><li><a href="PrivateChat.html#clearState">clearState</a></li><li><a href="PrivateChat.html#delete">delete</a></li><li><a href="PrivateChat.html#fetchMessages">fetchMessages</a></li><li><a href="PrivateChat.html#getContact">getContact</a></li><li><a href="PrivateChat.html#getLabels">getLabels</a></li><li><a href="PrivateChat.html#loadMessage">loadMessage</a></li><li><a href="PrivateChat.html#markUnread">markUnread</a></li><li><a href="PrivateChat.html#mute">mute</a></li><li><a href="PrivateChat.html#pin">pin</a></li><li><a href="PrivateChat.html#sendMessage">sendMessage</a></li><li><a href="PrivateChat.html#sendSeen">sendSeen</a></li><li><a href="PrivateChat.html#sendStateRecording">sendStateRecording</a></li><li><a href="PrivateChat.html#sendStateTyping">sendStateTyping</a></li><li><a href="PrivateChat.html#unarchive">unarchive</a></li><li><a href="PrivateChat.html#unmute">unmute</a></li><li><a href="PrivateChat.html#unpin">unpin</a></li></ul></div></li><li><a href="PrivateContact.html">PrivateContact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PrivateContact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="PrivateContact.html#id">id</a></li><li><a href="PrivateContact.html#isBlocked">isBlocked</a></li><li><a href="PrivateContact.html#isBusiness">isBusiness</a></li><li><a href="PrivateContact.html#isEnterprise">isEnterprise</a></li><li><a href="PrivateContact.html#isGroup">isGroup</a></li><li><a href="PrivateContact.html#isMe">isMe</a></li><li><a href="PrivateContact.html#isMyContact">isMyContact</a></li><li><a href="PrivateContact.html#isUser">isUser</a></li><li><a href="PrivateContact.html#isWAContact">isWAContact</a></li><li><a href="PrivateContact.html#name">name</a></li><li><a href="PrivateContact.html#number">number</a></li><li><a href="PrivateContact.html#pushname">pushname</a></li><li><a href="PrivateContact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="PrivateContact.html#block">block</a></li><li><a href="PrivateContact.html#getAbout">getAbout</a></li><li><a href="PrivateContact.html#getChat">getChat</a></li><li><a href="PrivateContact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="PrivateContact.html#unblock">unblock</a></li></ul></div></li><li><a href="Util.html">Util</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Util_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Util.html#.formatImageToWebpSticker">formatImageToWebpSticker</a></li><li><a href="Util.html#.formatToWebpSticker">formatToWebpSticker</a></li><li><a href="Util.html#.formatVideoToWebpSticker">formatVideoToWebpSticker</a></li><li><a href="Util.html#.mergeDefault">mergeDefault</a></li><li><a href="Util.html#.setFfmpegPath">setFfmpegPath</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#ChatTypes">ChatTypes</a></li><li class="hidden"><a href="global.html#ContactId">ContactId</a></li><li><a href="global.html#Events">Events</a></li><li><a href="global.html#GroupNotificationTypes">GroupNotificationTypes</a></li><li class="hidden"><a href="global.html#GroupParticipant">GroupParticipant</a></li><li><a href="global.html#MessageAck">MessageAck</a></li><li class="hidden"><a href="global.html#MessageInfo">MessageInfo</a></li><li class="hidden"><a href="global.html#MessageSendOptions">MessageSendOptions</a></li><li><a href="global.html#MessageTypes">MessageTypes</a></li><li><a href="global.html#Status">Status</a></li><li><a href="global.html#WAState">WAState</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const EventEmitter = require('events');
+const puppeteer = require('puppeteer');
+const moduleRaid = require('@pedroslopez/moduleraid/moduleraid');
+const jsQR = require('jsqr');
+
+const Util = require('./util/Util');
+const InterfaceController = require('./util/InterfaceController');
+const {WhatsWebURL, DefaultOptions, Events, WAState} = require(
+    './util/Constants');
+const {ExposeStore, LoadUtils} = require('./util/Injected');
+const ChatFactory = require('./factories/ChatFactory');
+const ContactFactory = require('./factories/ContactFactory');
+const {
+  ClientInfo,
+  Message,
+  MessageMedia,
+  Contact,
+  Location,
+  GroupNotification,
+  Label,
+} = require('./structures');
+
+/**
+ * Starting point for interacting with the WhatsApp Web API
+ * @extends {EventEmitter}
+ * @param {object} options - Client options
+ * @param {number} options.authTimeoutMs - Timeout for authentication selector
+ * in puppeteer
+ * @param {object} options.puppeteer - Puppeteer launch options. View docs here:
+ * https://github.com/puppeteer/puppeteer/
+ * @param {number} options.qrRefreshIntervalMs - Refresh interval for qr code
+ * (how much time to wait before checking if the qr code has changed)
+ * @param {number} options.qrTimeoutMs - Timeout for qr code selector in
+ * puppeteer
+ * @param {string} options.restartOnAuthFail  - Restart client with a new
+ * session (i.e. use null 'session' var) if authentication fails
+ * @param {object} options.session - Whatsapp session to restore. If not set,
+ * will start a new session
+ * @param {string} options.session.WABrowserId
+ * @param {string} options.session.WASecretBundle
+ * @param {string} options.session.WAToken1
+ * @param {string} options.session.WAToken2
+ * @param {number} options.takeoverOnConflict - If another whatsapp web session
+ * is detected (another browser), take over the session in the current browser
+ * @param {number} options.takeoverTimeoutMs - How much time to wait before
+ * taking over the session
+ * @param {string} options.userAgent - User agent to use in puppeteer
+ * @param {string} options.ffmpegPath - Ffmpeg path to use when formatting
+ * videos to webp while sending stickers
+ *
+ * @fires Client#qr
+ * @fires Client#authenticated
+ * @fires Client#auth_failure
+ * @fires Client#ready
+ * @fires Client#message
+ * @fires Client#message_ack
+ * @fires Client#message_create
+ * @fires Client#message_revoke_me
+ * @fires Client#message_revoke_everyone
+ * @fires Client#media_uploaded
+ * @fires Client#group_join
+ * @fires Client#group_leave
+ * @fires Client#group_update
+ * @fires Client#disconnected
+ * @fires Client#change_state
+ * @fires Client#change_battery
+ */
+class Client extends EventEmitter {
+  /**
+   * Creates Client instance.
+   * @param {ClientOptions} options
+   */
+  constructor(options = {}) {
+    super();
+
+    this.options = Util.mergeDefault(DefaultOptions, options);
+
+    this.pupBrowser = null;
+    this.pupPage = null;
+
+    Util.setFfmpegPath(this.options.ffmpegPath);
+  }
+
+  /**
+   * Sets up events and requirements, kicks off authentication request
+   */
+  async initialize() {
+    const browser = await puppeteer.launch(this.options.puppeteer);
+    const page = (await browser.pages())[0];
+    page.setUserAgent(this.options.userAgent);
+
+    this.pupBrowser = browser;
+    this.pupPage = page;
+
+    if (this.options.session) {
+      await page.evaluateOnNewDocument(
+          (session) => {
+            localStorage.clear();
+            localStorage.setItem('WABrowserId', session.WABrowserId);
+            localStorage.setItem('WASecretBundle', session.WASecretBundle);
+            localStorage.setItem('WAToken1', session.WAToken1);
+            localStorage.setItem('WAToken2', session.WAToken2);
+          }, this.options.session);
+    }
+
+    await page.goto(WhatsWebURL, {
+      waitUntil: 'load',
+      timeout: 0,
+    });
+
+    const KEEP_PHONE_CONNECTED_IMG_SELECTOR =
+        '[data-asset-intro-image-light="true"], ' +
+        '[data-asset-intro-image-dark="true"]';
+
+    if (this.options.session) {
+      // Check if session restore was successful
+      try {
+        await page.waitForSelector(KEEP_PHONE_CONNECTED_IMG_SELECTOR,
+            {timeout: this.options.authTimeoutMs});
+      } catch (err) {
+        if (err.name === 'TimeoutError') {
+          /**
+           * Emitted when there has been an error while trying to restore an
+           * existing session
+           * @event Client#auth_failure
+           * @param {string} message
+           */
+          this.emit(Events.AUTHENTICATION_FAILURE,
+              'Unable to log in. Are the session details valid?');
+          browser.close();
+          if (this.options.restartOnAuthFail) {
+            // session restore failed so try again but without session to force
+            // new authentication
+            this.options.session = null;
+            this.initialize();
+          }
+          return;
+        }
+
+        throw err;
+      }
+    } else {
+      const getQrCode = async () => {
+        // Check if retry button is present
+        const QR_RETRY_SELECTOR = 'div[data-ref] > span > div';
+        const qrRetry = await page.$(QR_RETRY_SELECTOR);
+        if (qrRetry) {
+          await qrRetry.click();
+        }
+
+        // Wait for QR Code
+
+        const QR_CANVAS_SELECTOR = 'canvas';
+        await page.waitForSelector(QR_CANVAS_SELECTOR,
+            {timeout: this.options.qrTimeoutMs});
+        const qrImgData = await page.$eval(QR_CANVAS_SELECTOR,
+            (canvas) => [].slice.call(
+                canvas.getContext('2d').getImageData(0, 0, 264, 264).data));
+        const qr = jsQR(qrImgData, 264, 264).data;
+        /**
+         * Emitted when the QR code is received
+         * @event Client#qr
+         * @param {string} qr QR Code
+         */
+        this.emit(Events.QR_RECEIVED, qr);
+      };
+      getQrCode();
+      this._qrRefreshInterval = setInterval(getQrCode,
+          this.options.qrRefreshIntervalMs);
+
+      // Wait for code scan
+      await page.waitForSelector(KEEP_PHONE_CONNECTED_IMG_SELECTOR,
+          {timeout: 0});
+      clearInterval(this._qrRefreshInterval);
+      this._qrRefreshInterval = undefined;
+    }
+
+    await page.evaluate(ExposeStore, moduleRaid.toString());
+
+    // Get session tokens
+    const localStorage = JSON.parse(await page.evaluate(() => {
+      return JSON.stringify(window.localStorage);
+    }));
+
+    const session = {
+      WABrowserId: localStorage.WABrowserId,
+      WASecretBundle: localStorage.WASecretBundle,
+      WAToken1: localStorage.WAToken1,
+      WAToken2: localStorage.WAToken2,
+    };
+
+    /**
+     * Emitted when authentication is successful
+     * @event Client#authenticated
+     * @param {object} session Object containing session information. Can be
+     * used to restore the session.
+     * @param {string} session.WABrowserId
+     * @param {string} session.WASecretBundle
+     * @param {string} session.WAToken1
+     * @param {string} session.WAToken2
+     */
+    this.emit(Events.AUTHENTICATED, session);
+
+    // Check window.Store Injection
+    await page.waitForFunction('window.Store != undefined');
+
+    // Load util functions (serializers, helper functions)
+    await page.evaluate(LoadUtils);
+
+    // Expose client info
+    /**
+     * Current connection information
+     * @type {ClientInfo}
+     */
+    this.info = new ClientInfo(this, await page.evaluate(() => {
+      return window.Store.Conn.serialize();
+    }));
+
+    // Add InterfaceController
+    this.interface = new InterfaceController(this);
+
+    // Register events
+    await page.exposeFunction('onAddMessageEvent', (msg) => {
+      if (!msg.isNewMsg) {
+        return;
+      }
+
+      if (msg.type === 'gp2') {
+        const notification = new GroupNotification(this, msg);
+        if (msg.subtype === 'add' || msg.subtype === 'invite') {
+          /**
+           * Emitted when a user joins the chat via invite link or is added by
+           * an admin.
+           * @event Client#group_join
+           * @param {GroupNotification} notification GroupNotification with more
+           * information about the action
+           */
+          this.emit(Events.GROUP_JOIN, notification);
+        } else if (msg.subtype === 'remove' || msg.subtype === 'leave') {
+          /**
+           * Emitted when a user leaves the chat or is removed by an admin.
+           * @event Client#group_leave
+           * @param {GroupNotification} notification GroupNotification with more
+           * information about the action
+           */
+          this.emit(Events.GROUP_LEAVE, notification);
+        } else {
+          /**
+           * Emitted when group settings are updated, such as subject,
+           * description or picture.
+           * @event Client#group_update
+           * @param {GroupNotification} notification GroupNotification with more
+           * information about the action
+           */
+          this.emit(Events.GROUP_UPDATE, notification);
+        }
+        return;
+      }
+
+      const message = new Message(this, msg);
+
+      /**
+       * Emitted when a new message is created, which may include the current
+       * user's own messages.
+       * @event Client#message_create
+       * @param {Message} message The message that was created
+       */
+      this.emit(Events.MESSAGE_CREATE, message);
+
+      if (msg.id.fromMe) {
+        return;
+      }
+
+      /**
+       * Emitted when a new message is received.
+       * @event Client#message
+       * @param {Message} message The message that was received
+       */
+      this.emit(Events.MESSAGE_RECEIVED, message);
+    });
+
+    let lastMessage;
+
+    await page.exposeFunction('onChangeMessageTypeEvent', (msg) => {
+      if (msg.type === 'revoked') {
+        const message = new Message(this, msg);
+        let revokedMsg;
+        if (lastMessage &amp;&amp; msg.id.id === lastMessage.id.id) {
+          revokedMsg = new Message(this, lastMessage);
+        }
+
+        /**
+         * Emitted when a message is deleted for everyone in the chat.
+         * @event Client#message_revoke_everyone
+         * @param {Message} message The message that was revoked, in its current
+         * state. It will not contain the original message's data.
+         * @param {?Message} revoked_msg The message that was revoked, before it
+         * was revoked. It will contain the message's original data.
+         * Note that due to the way this data is captured, it may be possible
+         * that this param will be undefined.
+         */
+        this.emit(Events.MESSAGE_REVOKED_EVERYONE, message, revokedMsg);
+      }
+    });
+
+    await page.exposeFunction('onChangeMessageEvent', (msg) => {
+      if (msg.type !== 'revoked') {
+        lastMessage = msg;
+      }
+    });
+
+    await page.exposeFunction('onRemoveMessageEvent', (msg) => {
+      if (!msg.isNewMsg) {
+        return;
+      }
+
+      const message = new Message(this, msg);
+
+      /**
+       * Emitted when a message is deleted by the current user.
+       * @event Client#message_revoke_me
+       * @param {Message} message The message that was revoked
+       */
+      this.emit(Events.MESSAGE_REVOKED_ME, message);
+    });
+
+    await page.exposeFunction('onMessageAckEvent', (msg, ack) => {
+      const message = new Message(this, msg);
+
+      /**
+       * Emitted when an ack event occurs on message type.
+       * @event Client#message_ack
+       * @param {Message} message The message that was affected
+       * @param {MessageAck} ack The new ACK value
+       */
+      this.emit(Events.MESSAGE_ACK, message, ack);
+    });
+
+    await page.exposeFunction('onMessageMediaUploadedEvent', (msg) => {
+      const message = new Message(this, msg);
+
+      /**
+       * Emitted when media has been uploaded for a message sent by the client.
+       * @event Client#media_uploaded
+       * @param {Message} message The message with media that was uploaded
+       */
+      this.emit(Events.MEDIA_UPLOADED, message);
+    });
+
+    await page.exposeFunction('onAppStateChangedEvent', (state) => {
+      /**
+       * Emitted when the connection state changes
+       * @event Client#change_state
+       * @param {WAState} state the new connection state
+       */
+      this.emit(Events.STATE_CHANGED, state);
+
+      const ACCEPTED_STATES = [
+        WAState.CONNECTED,
+        WAState.OPENING,
+        WAState.PAIRING,
+        WAState.TIMEOUT];
+
+      if (this.options.takeoverOnConflict) {
+        ACCEPTED_STATES.push(WAState.CONFLICT);
+
+        if (state === WAState.CONFLICT) {
+          setTimeout(() => {
+            this.pupPage.evaluate(() => window.Store.AppState.takeover());
+          }, this.options.takeoverTimeoutMs);
+        }
+      }
+
+      if (!ACCEPTED_STATES.includes(state)) {
+        /**
+         * Emitted when the client has been disconnected
+         * @event Client#disconnected
+         * @param {WAState} reason state that caused the disconnect
+         */
+        this.emit(Events.DISCONNECTED, state);
+        this.destroy();
+      }
+    });
+
+    await page.exposeFunction('onBatteryStateChangedEvent', (state) => {
+      const {battery, plugged} = state;
+
+      if (battery === undefined) {
+        return;
+      }
+
+      /**
+       * Emitted when the battery percentage for the attached device changes
+       * @event Client#change_battery
+       * @param {object} batteryInfo
+       * @param {number} batteryInfo.battery - The current battery percentage
+       * @param {boolean} batteryInfo.plugged - Indicates if the phone is
+       * plugged in (true) or not (false)
+       */
+      this.emit(Events.BATTERY_CHANGED, {battery, plugged});
+    });
+
+    await page.evaluate(() => {
+      window.Store.Msg.on('add', (msg) => {
+        if (msg.isNewMsg) {
+          window.onAddMessageEvent(
+              window.WWebJS.getMessageModel(msg));
+        }
+      });
+      window.Store.Msg.on('change', (msg) => {
+        window.onChangeMessageEvent(window.WWebJS.getMessageModel(msg));
+      });
+      window.Store.Msg.on('change:type', (msg) => {
+        window.onChangeMessageTypeEvent(window.WWebJS.getMessageModel(msg));
+      });
+      window.Store.Msg.on('change:ack', (msg, ack) => {
+        window.onMessageAckEvent(window.WWebJS.getMessageModel(msg), ack);
+      });
+      window.Store.Msg.on('change:isUnsentMedia', (msg, unsent) => {
+        if (msg.id.fromMe &amp;&amp; !unsent) {
+          window.onMessageMediaUploadedEvent(
+              window.WWebJS.getMessageModel(msg));
+        }
+      });
+      window.Store.Msg.on('remove', (msg) => {
+        if (msg.isNewMsg) {
+          window.onRemoveMessageEvent(
+              window.WWebJS.getMessageModel(msg));
+        }
+      });
+      window.Store.AppState.on('change:state', (_AppState, state) => {
+        window.onAppStateChangedEvent(state);
+      });
+      window.Store.Conn.on('change:battery', (state) => {
+        window.onBatteryStateChangedEvent(state);
+      });
+    });
+
+    /**
+     * Emitted when the client has initialized and is ready to receive messages.
+     * @event Client#ready
+     */
+    this.emit(Events.READY);
+  }
+
+  /**
+   * Closes the client
+   */
+  async destroy() {
+    if (this._qrRefreshInterval) {
+      clearInterval(this._qrRefreshInterval);
+    }
+    await this.pupBrowser.close();
+  }
+
+  /**
+   * Logs out the client, closing the current session
+   */
+  async logout() {
+    return await this.pupPage.evaluate(() => {
+      return window.Store.AppState.logout();
+    });
+  }
+
+  /**
+   * Returns the version of WhatsApp Web currently being run
+   * @return {Promise&lt;string>}
+   */
+  async getWWebVersion() {
+    return await this.pupPage.evaluate(() => {
+      return window.Debug.VERSION;
+    });
+  }
+
+  /**
+   * Mark as seen for the Chat
+   *  @param {string} chatId
+   *  @return {Promise&lt;boolean>} result
+   *
+   */
+  async sendSeen(chatId) {
+    const result = await this.pupPage.evaluate(async (chatId) => {
+      return window.WWebJS.sendSeen(chatId);
+    }, chatId);
+    return result;
+  }
+
+  /**
+   * Message options.
+   * @typedef {Object} MessageSendOptions
+   * @property {boolean} [linkPreview=true] - Show links preview
+   * @property {boolean} [sendAudioAsVoice=false] - Send audio as voice message
+   * @property {boolean} [sendVideoAsGif=false] - Send video as gif
+   * @property {boolean} [sendMediaAsSticker=false] - Send media as a sticker
+   * @property {boolean} [sendMediaAsDocument=false] - Send media as a document
+   * @property {boolean} [parseVCards=true] - Automatically parse vCards and
+   * send them as contacts
+   * @property {string} [caption] - Image or video caption
+   * @property {string} [quotedMessageId] - Id of the message that is being
+   * quoted (or replied to)
+   * @property {Contact} [quotedParticipant] - Contact of the sender of the
+   * quote
+   * @property {string} [quotedMessageContent] - Text in quote
+   * @property {Contact[]} [mentions] - Contacts that are being mentioned in the
+   * message
+   * @property {boolean} [sendSeen=true] - Mark the conversation as seen after
+   * sending the message
+   * @property {MessageMedia} [media] - Media to be sent
+   */
+
+  /**
+   * Send a message to a specific chatId
+   * @param {string} chatId
+   * @param {string|MessageMedia|Location|Contact|Array&lt;Contact>} content
+   * @param {MessageSendOptions} [options] - Options used when sending the
+   * message
+   *
+   * @return {Promise&lt;Message>} Message that was just sent
+   */
+  async sendMessage(chatId, content, options = {}) {
+    const internalOptions = {
+      linkPreview: options.linkPreview === false ? undefined : true,
+      sendAudioAsVoice: options.sendAudioAsVoice,
+      sendVideoAsGif: options.sendVideoAsGif,
+      sendMediaAsSticker: options.sendMediaAsSticker,
+      sendMediaAsDocument: options.sendMediaAsDocument,
+      caption: options.caption,
+      quotedMessageId: options.quotedMessageId,
+      quotedParticipant: options.quotedParticipant,
+      quotedMessageContent: options.quotedMessageContent,
+      parseVCards: options.parseVCards !== false,
+      mentionedJidList: Array.isArray(options.mentions) ?
+          options.mentions.map((contact) => contact.id._serialized) :
+          [],
+    };
+
+    const sendSeen = typeof options.sendSeen === 'undefined' ?
+        true :
+        options.sendSeen;
+
+    if (content instanceof MessageMedia) {
+      internalOptions.attachment = content;
+      content = '';
+    } else if (options.media instanceof MessageMedia) {
+      internalOptions.attachment = options.media;
+      internalOptions.caption = content;
+      content = '';
+    } else if (content instanceof Location) {
+      internalOptions.location = content;
+      content = '';
+    } else if (content instanceof Contact) {
+      internalOptions.contactCard = content.id._serialized;
+      content = '';
+    } else if (Array.isArray(content) &amp;&amp; content.length > 0 &amp;&amp;
+        content[0] instanceof Contact) {
+      internalOptions.contactCardList = content.map(
+          (contact) => contact.id._serialized);
+      content = '';
+    }
+
+    if (internalOptions.sendMediaAsSticker &amp;&amp; internalOptions.attachment) {
+      internalOptions.attachment = await Util.formatToWebpSticker(
+          internalOptions.attachment);
+    }
+
+    const newMessage = await this.pupPage.evaluate(
+        async (chatId, message, options, sendSeen) => {
+          const chatWid = window.Store.WidFactory.createWid(chatId);
+          const chat = await window.Store.Chat.find(chatWid);
+
+          if (sendSeen) {
+            window.WWebJS.sendSeen(chatId);
+          }
+
+          const msg = await window.WWebJS.sendMessage(chat, message, options,
+              sendSeen);
+          return msg.serialize();
+        }, chatId, content, internalOptions, sendSeen);
+
+    return new Message(this, newMessage);
+  }
+
+  /**
+   * Get all current chat instances
+   * @return {Promise&lt;Array&lt;Chat>>}
+   */
+  async getChats() {
+    const chats = await this.pupPage.evaluate(async () => {
+      return await window.WWebJS.getChats();
+    });
+
+    return chats.map((chat) => ChatFactory.create(this, chat));
+  }
+
+  /**
+   * Get chat instance by ID
+   * @param {string} chatId
+   * @return {Promise&lt;Chat>}
+   */
+  async getChatById(chatId) {
+    const chat = await this.pupPage.evaluate(async (chatId) => {
+      return await window.WWebJS.getChat(chatId);
+    }, chatId);
+
+    return ChatFactory.create(this, chat);
+  }
+
+  /**
+   * Get all current contact instances
+   * @return {Promise&lt;Array&lt;Contact>>}
+   */
+  async getContacts() {
+    const contacts = await this.pupPage.evaluate(() => {
+      return window.WWebJS.getContacts();
+    });
+
+    return contacts.map((contact) => ContactFactory.create(this, contact));
+  }
+
+  /**
+   * Get contact instance by ID
+   * @param {string} contactId
+   * @return {Promise&lt;Contact>}
+   */
+  async getContactById(contactId) {
+    const contact = await this.pupPage.evaluate((contactId) => {
+      return window.WWebJS.getContact(contactId);
+    }, contactId);
+
+    return ContactFactory.create(this, contact);
+  }
+
+  /**
+   * Returns an object with information about the invite code's group
+   * @param {string} inviteCode
+   * @return {Promise&lt;object>} Invite information
+   */
+  async getInviteInfo(inviteCode) {
+    return await this.pupPage.evaluate((inviteCode) => {
+      return window.Store.Wap.groupInviteInfo(inviteCode);
+    }, inviteCode);
+  }
+
+  /**
+   * Accepts an invitation to join a group
+   * @param {string} inviteCode Invitation code
+   * @return {Promise&lt;string>} Id of the joined Chat
+   */
+  async acceptInvite(inviteCode) {
+    const chatId = await this.pupPage.evaluate(async (inviteCode) => {
+      return await window.Store.Invite.sendJoinGroupViaInvite(inviteCode);
+    }, inviteCode);
+
+    return chatId._serialized;
+  }
+
+  /**
+   * Sets the current user's status message
+   * @param {string} status New status message
+   */
+  async setStatus(status) {
+    await this.pupPage.evaluate(async (status) => {
+      return await window.Store.Wap.sendSetStatus(status);
+    }, status);
+  }
+
+  /**
+   * Sets the current user's display name.
+   * This is the name shown to WhatsApp users that have not added you as a
+   * contact beside your number in groups and in your profile.
+   * @param {string} displayName New display name
+   */
+  async setDisplayName(displayName) {
+    await this.pupPage.evaluate(async (displayName) => {
+      return await window.Store.Wap.setPushname(displayName);
+    }, displayName);
+  }
+
+  /**
+   * Gets the current connection state for the client
+   * @return {WAState}
+   */
+  async getState() {
+    return await this.pupPage.evaluate(() => {
+      return window.Store.AppState.state;
+    });
+  }
+
+  /**
+   * Marks the client as online
+   */
+  async sendPresenceAvailable() {
+    return await this.pupPage.evaluate(() => {
+      return window.Store.Wap.sendPresenceAvailable();
+    });
+  }
+
+  /**
+   * Enables and returns the archive state of the Chat
+   * @param {string} chatId
+   * @return {boolean}
+   */
+  async archiveChat(chatId) {
+    return await this.pupPage.evaluate(async (chatId) => {
+      const chat = await window.Store.Chat.get(chatId);
+      await window.Store.Cmd.archiveChat(chat, true);
+      return chat.archive;
+    }, chatId);
+  }
+
+  /**
+   * Changes and returns the archive state of the Chat
+   * @param {string} chatId
+   * @return {boolean}
+   */
+  async unarchiveChat(chatId) {
+    return await this.pupPage.evaluate(async (chatId) => {
+      const chat = await window.Store.Chat.get(chatId);
+      await window.Store.Cmd.archiveChat(chat, false);
+      return chat.archive;
+    }, chatId);
+  }
+
+  /**
+   * Pins the Chat
+   * @param {string} chatId
+   * @return {Promise&lt;boolean>} New pin state. Could be false if the max number
+   * of pinned chats was reached.
+   */
+  async pinChat(chatId) {
+    return this.pupPage.evaluate(async (chatId) => {
+      const chat = window.Store.Chat.get(chatId);
+      if (chat.pin) {
+        return true;
+      }
+      const MAX_PIN_COUNT = 3;
+      if (window.Store.Chat.models.length > MAX_PIN_COUNT) {
+        const maxPinned = window.Store.Chat.models[MAX_PIN_COUNT - 1].pin;
+        if (maxPinned) {
+          return false;
+        }
+      }
+      await window.Store.Cmd.pinChat(chat, true);
+      return true;
+    }, chatId);
+  }
+
+  /**
+   * Unpins the Chat
+   * @param {string} chatId
+   * @return {Promise&lt;boolean>} New pin state
+   */
+  async unpinChat(chatId) {
+    return this.pupPage.evaluate(async (chatId) => {
+      const chat = window.Store.Chat.get(chatId);
+      if (!chat.pin) {
+        return false;
+      }
+      await window.Store.Cmd.pinChat(chat, false);
+      return false;
+    }, chatId);
+  }
+
+  /**
+   * Mutes the Chat until a specified date
+   * @param {string} chatId ID of the chat that will be muted
+   * @param {Date} unmuteDate Date when the chat will be unmuted
+   */
+  async muteChat(chatId, unmuteDate) {
+    await this.pupPage.evaluate(async (chatId, timestamp) => {
+      const chat = await window.Store.Chat.get(chatId);
+      await chat.mute.mute(timestamp, !0);
+    }, chatId, unmuteDate.getTime() / 1000);
+  }
+
+  /**
+   * Unmutes the Chat
+   * @param {string} chatId ID of the chat that will be unmuted
+   */
+  async unmuteChat(chatId) {
+    await this.pupPage.evaluate(async (chatId) => {
+      const chat = await window.Store.Chat.get(chatId);
+      await window.Store.Cmd.muteChat(chat, false);
+    }, chatId);
+  }
+
+  /**
+   * Mark the Chat as unread
+   * @param {string} chatId ID of the chat that will be marked as unread
+   */
+  async markChatUnread(chatId) {
+    await this.pupPage.evaluate(async (chatId) => {
+      const chat = await window.Store.Chat.get(chatId);
+      await window.Store.Cmd.markChatUnread(chat, true);
+    }, chatId);
+  }
+
+  /**
+   * Returns the contact ID's profile picture URL, if privacy settings allow it
+   * @param {string} contactId the whatsapp user's ID
+   * @return {Promise&lt;string>}
+   */
+  async getProfilePicUrl(contactId) {
+    const profilePic = await this.pupPage.evaluate((contactId) => {
+      return window.Store.Wap.profilePicFind(contactId);
+    }, contactId);
+
+    return profilePic ? profilePic.eurl : undefined;
+  }
+
+  /**
+   * Force reset of connection state for the client
+   */
+  async resetState() {
+    await this.pupPage.evaluate(() => {
+      window.Store.AppState.phoneWatchdog.shiftTimer.forceRunNow();
+    });
+  }
+
+  /**
+   * Check if a given ID is registered in whatsapp
+   * @param {string} id the whatsapp user's ID
+   * @return {Promise&lt;Boolean>}
+   */
+  async isRegisteredUser(id) {
+    return await this.pupPage.evaluate(async (id) => {
+      const result = await window.Store.Wap.queryExist(id);
+      return result.jid !== undefined;
+    }, id);
+  }
+
+  /**
+   * Get the registered WhatsApp ID for a number.
+   * Will return null if the number is not registered on WhatsApp.
+   * @param {string} number Number or ID ("@c.us" will be automatically appended
+   * if not specified)
+   * @return {Promise&lt;Object|null>}
+   */
+  async getNumberId(number) {
+    if (!number.endsWith('@c.us')) {
+      number += '@c.us';
+    }
+
+    try {
+      return await this.pupPage.evaluate(async (numberId) => {
+        return window.WWebJS.getNumberId(numberId);
+      }, number);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /**
+   * Create a new group
+   * @param {string} name group title
+   * @param {Array&lt;Contact|string>} participants an array of Contacts or contact
+   * IDs to add to the group
+   * @return {Object} createRes
+   * @return {string} createRes.gid - ID for the group that was just created
+   * @return {Object.&lt;string,string>} createRes.missingParticipants -
+   * participants that were not added to the group. Keys represent the ID for
+   * participant that was not added and its value is a status code that
+   * represents the reason why participant could not be added. This is usually
+   * 403 if the user's privacy settings don't allow you to add them to groups.
+   */
+  async createGroup(name, participants) {
+    if (!Array.isArray(participants) || participants.length === 0) {
+      // eslint-disable-next-line no-throw-literal
+      throw 'You need to add at least one other participant to the group';
+    }
+
+    if (participants.every((c) => c instanceof Contact)) {
+      participants = participants.map((c) => c.id._serialized);
+    }
+
+    const createRes = await this.pupPage.evaluate(
+        async (name, participantIds) => {
+          const res = await window.Store.Wap.createGroup(name, participantIds);
+          // TODO: WTF is this?
+          console.log(res);
+          if (!res.status === 200) {
+            // eslint-disable-next-line no-throw-literal
+            throw 'An error occurred while creating the group!';
+          }
+
+          return res;
+        }, name, participants);
+
+    const missingParticipants = createRes.participants.reduce(((missing, c) => {
+      const id = Object.keys(c)[0];
+      const statusCode = c[id].code;
+      if (statusCode !== 200) {
+        return Object.assign(missing, {[id]: statusCode});
+      }
+      return missing;
+    }), {});
+
+    return {gid: createRes.gid, missingParticipants};
+  }
+
+  /**
+   * Get all current Labels
+   * @return {Promise&lt;Array&lt;Label>>}
+   */
+  async getLabels() {
+    const labels = await this.pupPage.evaluate(async () => {
+      return window.WWebJS.getLabels();
+    });
+
+    return labels.map((data) => new Label(this, data));
+  }
+
+  /**
+   * Get Label instance by ID
+   * @param {string} labelId
+   * @return {Promise&lt;Label>}
+   */
+  async getLabelById(labelId) {
+    const label = await this.pupPage.evaluate(async (labelId) => {
+      return window.WWebJS.getLabel(labelId);
+    }, labelId);
+
+    return new Label(this, label);
+  }
+
+  /**
+   * Get all Labels assigned to a chat
+   * @param {string} chatId
+   * @return {Promise&lt;Array&lt;Label>>}
+   */
+  async getChatLabels(chatId) {
+    const labels = await this.pupPage.evaluate(async (chatId) => {
+      return window.WWebJS.getChatLabels(chatId);
+    }, chatId);
+
+    return labels.map((data) => new Label(this, data));
+  }
+
+  /**
+   * Get all Chats for a specific Label
+   * @param {string} labelId
+   * @return {Promise&lt;Array&lt;Chat>>}
+   */
+  async getChatsByLabelId(labelId) {
+    const chatIds = await this.pupPage.evaluate(async (labelId) => {
+      const label = window.Store.Label.get(labelId);
+      const labelItems = label.labelItemCollection.models;
+      return labelItems.reduce((result, item) => {
+        if (item.parentType === 'Chat') {
+          result.push(item.parentId);
+        }
+        return result;
+      }, []);
+    }, labelId);
+
+    return Promise.all(chatIds.map((id) => this.getChatById(id)));
+  }
+}
+
+module.exports = Client;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">NHN Entertainment. Frontend Development Lab</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>

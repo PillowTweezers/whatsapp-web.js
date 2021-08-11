@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: structures/ClientInfo.js | whatsapp-web.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-jsdoc.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/tui-doc.css">
+
+    
+</head>
+<body>
+<nav class="lnb" id="lnb">
+    <div class="logo" style="">
+        
+            <img src="img/toast-ui.png" width="100%" height="100%">
+        
+    </div>
+    <div class="title">
+        <h1><a href="index.html" class="link">whatsapp-web.js</a></h1>
+        
+            <span class="version">v1.12.5</span>
+        
+    </div>
+    <div class="search-container" id="search-container">
+        <input type="text" placeholder="Search">
+        <ul></ul>
+    </div>
+    
+    <div class="lnb-api hidden"><h3>Classes</h3><ul><li><a href="Base.html">Base</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Base_sub"></div></li><li><a href="BusinessContact.html">BusinessContact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="BusinessContact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="BusinessContact.html#businessProfile">businessProfile</a></li><li><a href="BusinessContact.html#id">id</a></li><li><a href="BusinessContact.html#isBlocked">isBlocked</a></li><li><a href="BusinessContact.html#isBusiness">isBusiness</a></li><li><a href="BusinessContact.html#isEnterprise">isEnterprise</a></li><li><a href="BusinessContact.html#isGroup">isGroup</a></li><li><a href="BusinessContact.html#isMe">isMe</a></li><li><a href="BusinessContact.html#isMyContact">isMyContact</a></li><li><a href="BusinessContact.html#isUser">isUser</a></li><li><a href="BusinessContact.html#isWAContact">isWAContact</a></li><li><a href="BusinessContact.html#name">name</a></li><li><a href="BusinessContact.html#number">number</a></li><li><a href="BusinessContact.html#pushname">pushname</a></li><li><a href="BusinessContact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="BusinessContact.html#block">block</a></li><li><a href="BusinessContact.html#getAbout">getAbout</a></li><li><a href="BusinessContact.html#getChat">getChat</a></li><li><a href="BusinessContact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="BusinessContact.html#unblock">unblock</a></li></ul></div></li><li><a href="Chat.html">Chat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Chat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Chat.html#archived">archived</a></li><li><a href="Chat.html#id">id</a></li><li><a href="Chat.html#isGroup">isGroup</a></li><li><a href="Chat.html#isMuted">isMuted</a></li><li><a href="Chat.html#isReadOnly">isReadOnly</a></li><li><a href="Chat.html#muteExpiration">muteExpiration</a></li><li><a href="Chat.html#name">name</a></li><li><a href="Chat.html#pinned">pinned</a></li><li><a href="Chat.html#timestamp">timestamp</a></li><li><a href="Chat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Chat.html#archive">archive</a></li><li><a href="Chat.html#clearMessages">clearMessages</a></li><li><a href="Chat.html#clearState">clearState</a></li><li><a href="Chat.html#delete">delete</a></li><li><a href="Chat.html#fetchMessages">fetchMessages</a></li><li><a href="Chat.html#getContact">getContact</a></li><li><a href="Chat.html#getLabels">getLabels</a></li><li><a href="Chat.html#loadMessage">loadMessage</a></li><li><a href="Chat.html#markUnread">markUnread</a></li><li><a href="Chat.html#mute">mute</a></li><li><a href="Chat.html#pin">pin</a></li><li><a href="Chat.html#sendMessage">sendMessage</a></li><li><a href="Chat.html#sendSeen">sendSeen</a></li><li><a href="Chat.html#sendStateRecording">sendStateRecording</a></li><li><a href="Chat.html#sendStateTyping">sendStateTyping</a></li><li><a href="Chat.html#unarchive">unarchive</a></li><li><a href="Chat.html#unmute">unmute</a></li><li><a href="Chat.html#unpin">unpin</a></li></ul></div></li><li><a href="ChatFactory.html">ChatFactory</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ChatFactory_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ChatFactory.html#.create">create</a></li></ul></div></li><li><a href="Client.html">Client</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Client_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Client.html#info">info</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Client.html#acceptInvite">acceptInvite</a></li><li><a href="Client.html#archiveChat">archiveChat</a></li><li><a href="Client.html#createGroup">createGroup</a></li><li><a href="Client.html#destroy">destroy</a></li><li><a href="Client.html#getChatById">getChatById</a></li><li><a href="Client.html#getChatLabels">getChatLabels</a></li><li><a href="Client.html#getChats">getChats</a></li><li><a href="Client.html#getChatsByLabelId">getChatsByLabelId</a></li><li><a href="Client.html#getContactById">getContactById</a></li><li><a href="Client.html#getContacts">getContacts</a></li><li><a href="Client.html#getInviteInfo">getInviteInfo</a></li><li><a href="Client.html#getLabelById">getLabelById</a></li><li><a href="Client.html#getLabels">getLabels</a></li><li><a href="Client.html#getNumberId">getNumberId</a></li><li><a href="Client.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="Client.html#getState">getState</a></li><li><a href="Client.html#getWWebVersion">getWWebVersion</a></li><li><a href="Client.html#initialize">initialize</a></li><li><a href="Client.html#isRegisteredUser">isRegisteredUser</a></li><li><a href="Client.html#logout">logout</a></li><li><a href="Client.html#markChatUnread">markChatUnread</a></li><li><a href="Client.html#muteChat">muteChat</a></li><li><a href="Client.html#pinChat">pinChat</a></li><li><a href="Client.html#resetState">resetState</a></li><li><a href="Client.html#sendMessage">sendMessage</a></li><li><a href="Client.html#sendPresenceAvailable">sendPresenceAvailable</a></li><li><a href="Client.html#sendSeen">sendSeen</a></li><li><a href="Client.html#setDisplayName">setDisplayName</a></li><li><a href="Client.html#setStatus">setStatus</a></li><li><a href="Client.html#unarchiveChat">unarchiveChat</a></li><li><a href="Client.html#unmuteChat">unmuteChat</a></li><li><a href="Client.html#unpinChat">unpinChat</a></li></ul><div class="member-type">Events</div><ul class="inner"><li><a href="Client.html#event:auth_failure">auth_failure</a></li><li><a href="Client.html#event:authenticated">authenticated</a></li><li><a href="Client.html#event:change_battery">change_battery</a></li><li><a href="Client.html#event:change_state">change_state</a></li><li><a href="Client.html#event:disconnected">disconnected</a></li><li><a href="Client.html#event:group_join">group_join</a></li><li><a href="Client.html#event:group_leave">group_leave</a></li><li><a href="Client.html#event:group_update">group_update</a></li><li><a href="Client.html#event:media_uploaded">media_uploaded</a></li><li><a href="Client.html#event:message">message</a></li><li><a href="Client.html#event:message_ack">message_ack</a></li><li><a href="Client.html#event:message_create">message_create</a></li><li><a href="Client.html#event:message_revoke_everyone">message_revoke_everyone</a></li><li><a href="Client.html#event:message_revoke_me">message_revoke_me</a></li><li><a href="Client.html#event:qr">qr</a></li><li><a href="Client.html#event:ready">ready</a></li></ul></div></li><li><a href="ClientInfo.html">ClientInfo</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ClientInfo_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="ClientInfo.html#me">me</a></li><li><a href="ClientInfo.html#phone">phone</a></li><li><a href="ClientInfo.html#platform">platform</a></li><li><a href="ClientInfo.html#pushname">pushname</a></li><li><a href="ClientInfo.html#wid">wid</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="ClientInfo.html#getBatteryStatus">getBatteryStatus</a></li></ul></div></li><li><a href="Contact.html">Contact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Contact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Contact.html#id">id</a></li><li><a href="Contact.html#isBlocked">isBlocked</a></li><li><a href="Contact.html#isBusiness">isBusiness</a></li><li><a href="Contact.html#isEnterprise">isEnterprise</a></li><li><a href="Contact.html#isGroup">isGroup</a></li><li><a href="Contact.html#isMe">isMe</a></li><li><a href="Contact.html#isMyContact">isMyContact</a></li><li><a href="Contact.html#isUser">isUser</a></li><li><a href="Contact.html#isWAContact">isWAContact</a></li><li><a href="Contact.html#name">name</a></li><li><a href="Contact.html#number">number</a></li><li><a href="Contact.html#pushname">pushname</a></li><li><a href="Contact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Contact.html#block">block</a></li><li><a href="Contact.html#getAbout">getAbout</a></li><li><a href="Contact.html#getChat">getChat</a></li><li><a href="Contact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="Contact.html#unblock">unblock</a></li></ul></div></li><li><a href="ContactFactory.html">ContactFactory</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="ContactFactory_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="ContactFactory.html#.create">create</a></li></ul></div></li><li><a href="GroupChat.html">GroupChat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="GroupChat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="GroupChat.html#archived">archived</a></li><li><a href="GroupChat.html#createdAt">createdAt</a></li><li><a href="GroupChat.html#description">description</a></li><li><a href="GroupChat.html#id">id</a></li><li><a href="GroupChat.html#isGroup">isGroup</a></li><li><a href="GroupChat.html#isMuted">isMuted</a></li><li><a href="GroupChat.html#isReadOnly">isReadOnly</a></li><li><a href="GroupChat.html#muteExpiration">muteExpiration</a></li><li><a href="GroupChat.html#name">name</a></li><li><a href="GroupChat.html#owner">owner</a></li><li><a href="GroupChat.html#participants">participants</a></li><li><a href="GroupChat.html#pinned">pinned</a></li><li><a href="GroupChat.html#timestamp">timestamp</a></li><li><a href="GroupChat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="GroupChat.html#addParticipants">addParticipants</a></li><li><a href="GroupChat.html#archive">archive</a></li><li><a href="GroupChat.html#clearMessages">clearMessages</a></li><li><a href="GroupChat.html#clearState">clearState</a></li><li><a href="GroupChat.html#delete">delete</a></li><li><a href="GroupChat.html#demoteParticipants">demoteParticipants</a></li><li><a href="GroupChat.html#fetchMessages">fetchMessages</a></li><li><a href="GroupChat.html#getContact">getContact</a></li><li><a href="GroupChat.html#getInviteCode">getInviteCode</a></li><li><a href="GroupChat.html#getLabels">getLabels</a></li><li><a href="GroupChat.html#leave">leave</a></li><li><a href="GroupChat.html#loadMessage">loadMessage</a></li><li><a href="GroupChat.html#markUnread">markUnread</a></li><li><a href="GroupChat.html#mute">mute</a></li><li><a href="GroupChat.html#pin">pin</a></li><li><a href="GroupChat.html#promoteParticipants">promoteParticipants</a></li><li><a href="GroupChat.html#removeParticipants">removeParticipants</a></li><li><a href="GroupChat.html#revokeInvite">revokeInvite</a></li><li><a href="GroupChat.html#sendMessage">sendMessage</a></li><li><a href="GroupChat.html#sendSeen">sendSeen</a></li><li><a href="GroupChat.html#sendStateRecording">sendStateRecording</a></li><li><a href="GroupChat.html#sendStateTyping">sendStateTyping</a></li><li><a href="GroupChat.html#setDescription">setDescription</a></li><li><a href="GroupChat.html#setInfoAdminsOnly">setInfoAdminsOnly</a></li><li><a href="GroupChat.html#setMessagesAdminsOnly">setMessagesAdminsOnly</a></li><li><a href="GroupChat.html#setSubject">setSubject</a></li><li><a href="GroupChat.html#unarchive">unarchive</a></li><li><a href="GroupChat.html#unmute">unmute</a></li><li><a href="GroupChat.html#unpin">unpin</a></li></ul></div></li><li><a href="GroupNotification.html">GroupNotification</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="GroupNotification_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="GroupNotification.html#author">author</a></li><li><a href="GroupNotification.html#body">body</a></li><li><a href="GroupNotification.html#chatId">chatId</a></li><li><a href="GroupNotification.html#id">id</a></li><li><a href="GroupNotification.html#recipientIds">recipientIds</a></li><li><a href="GroupNotification.html#timestamp">timestamp</a></li><li><a href="GroupNotification.html#type">type</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="GroupNotification.html#getChat">getChat</a></li><li><a href="GroupNotification.html#getContact">getContact</a></li><li><a href="GroupNotification.html#getRecipients">getRecipients</a></li><li><a href="GroupNotification.html#reply">reply</a></li></ul></div></li><li><a href="InterfaceController.html">InterfaceController</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="InterfaceController_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="InterfaceController.html#closeRightDrawer">closeRightDrawer</a></li><li><a href="InterfaceController.html#openChatDrawer">openChatDrawer</a></li><li><a href="InterfaceController.html#openChatSearch">openChatSearch</a></li><li><a href="InterfaceController.html#openChatWindow">openChatWindow</a></li><li><a href="InterfaceController.html#openChatWindowAt">openChatWindowAt</a></li><li><a href="InterfaceController.html#openMessageDrawer">openMessageDrawer</a></li></ul></div></li><li><a href="Label.html">Label</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Label_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Label.html#hexColor">hexColor</a></li><li><a href="Label.html#id">id</a></li><li><a href="Label.html#name">name</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Label.html#getChats">getChats</a></li></ul></div></li><li><a href="Location.html">Location</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Location_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Location.html#description">description</a></li><li><a href="Location.html#latitude">latitude</a></li><li><a href="Location.html#longitude">longitude</a></li></ul></div></li><li><a href="Message.html">Message</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Message_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="Message.html#ack">ack</a></li><li><a href="Message.html#author">author</a></li><li><a href="Message.html#body">body</a></li><li><a href="Message.html#broadcast">broadcast</a></li><li><a href="Message.html#from">from</a></li><li><a href="Message.html#fromMe">fromMe</a></li><li><a href="Message.html#hasMedia">hasMedia</a></li><li><a href="Message.html#hasQuotedMsg">hasQuotedMsg</a></li><li><a href="Message.html#id">id</a></li><li><a href="Message.html#isForwarded">isForwarded</a></li><li><a href="Message.html#isStarred">isStarred</a></li><li><a href="Message.html#isStatus">isStatus</a></li><li><a href="Message.html#links">links</a></li><li><a href="Message.html#location">location</a></li><li><a href="Message.html#mediaKey">mediaKey</a></li><li><a href="Message.html#mentionedIds">mentionedIds</a></li><li><a href="Message.html#timestamp">timestamp</a></li><li><a href="Message.html#to">to</a></li><li><a href="Message.html#type">type</a></li><li><a href="Message.html#vCards">vCards</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="Message.html#delete">delete</a></li><li><a href="Message.html#downloadMedia">downloadMedia</a></li><li><a href="Message.html#forward">forward</a></li><li><a href="Message.html#getChat">getChat</a></li><li><a href="Message.html#getChatId">getChatId</a></li><li><a href="Message.html#getContact">getContact</a></li><li><a href="Message.html#getInfo">getInfo</a></li><li><a href="Message.html#getMentions">getMentions</a></li><li><a href="Message.html#getQuotedMessage">getQuotedMessage</a></li><li><a href="Message.html#reply">reply</a></li><li><a href="Message.html#star">star</a></li><li><a href="Message.html#unstar">unstar</a></li></ul></div></li><li><a href="MessageMedia.html">MessageMedia</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="MessageMedia_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="MessageMedia.html#data">data</a></li><li><a href="MessageMedia.html#filename">filename</a></li><li><a href="MessageMedia.html#mimetype">mimetype</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="MessageMedia.html#.fromDataUri">fromDataUri</a></li><li><a href="MessageMedia.html#.fromFilePath">fromFilePath</a></li><li><a href="MessageMedia.html#getDataUri">getDataUri</a></li></ul></div></li><li><a href="PrivateChat.html">PrivateChat</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PrivateChat_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="PrivateChat.html#archived">archived</a></li><li><a href="PrivateChat.html#id">id</a></li><li><a href="PrivateChat.html#isGroup">isGroup</a></li><li><a href="PrivateChat.html#isMuted">isMuted</a></li><li><a href="PrivateChat.html#isReadOnly">isReadOnly</a></li><li><a href="PrivateChat.html#muteExpiration">muteExpiration</a></li><li><a href="PrivateChat.html#name">name</a></li><li><a href="PrivateChat.html#pinned">pinned</a></li><li><a href="PrivateChat.html#timestamp">timestamp</a></li><li><a href="PrivateChat.html#unreadCount">unreadCount</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="PrivateChat.html#archive">archive</a></li><li><a href="PrivateChat.html#clearMessages">clearMessages</a></li><li><a href="PrivateChat.html#clearState">clearState</a></li><li><a href="PrivateChat.html#delete">delete</a></li><li><a href="PrivateChat.html#fetchMessages">fetchMessages</a></li><li><a href="PrivateChat.html#getContact">getContact</a></li><li><a href="PrivateChat.html#getLabels">getLabels</a></li><li><a href="PrivateChat.html#loadMessage">loadMessage</a></li><li><a href="PrivateChat.html#markUnread">markUnread</a></li><li><a href="PrivateChat.html#mute">mute</a></li><li><a href="PrivateChat.html#pin">pin</a></li><li><a href="PrivateChat.html#sendMessage">sendMessage</a></li><li><a href="PrivateChat.html#sendSeen">sendSeen</a></li><li><a href="PrivateChat.html#sendStateRecording">sendStateRecording</a></li><li><a href="PrivateChat.html#sendStateTyping">sendStateTyping</a></li><li><a href="PrivateChat.html#unarchive">unarchive</a></li><li><a href="PrivateChat.html#unmute">unmute</a></li><li><a href="PrivateChat.html#unpin">unpin</a></li></ul></div></li><li><a href="PrivateContact.html">PrivateContact</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="PrivateContact_sub"><div class="member-type">Members</div><ul class="inner"><li><a href="PrivateContact.html#id">id</a></li><li><a href="PrivateContact.html#isBlocked">isBlocked</a></li><li><a href="PrivateContact.html#isBusiness">isBusiness</a></li><li><a href="PrivateContact.html#isEnterprise">isEnterprise</a></li><li><a href="PrivateContact.html#isGroup">isGroup</a></li><li><a href="PrivateContact.html#isMe">isMe</a></li><li><a href="PrivateContact.html#isMyContact">isMyContact</a></li><li><a href="PrivateContact.html#isUser">isUser</a></li><li><a href="PrivateContact.html#isWAContact">isWAContact</a></li><li><a href="PrivateContact.html#name">name</a></li><li><a href="PrivateContact.html#number">number</a></li><li><a href="PrivateContact.html#pushname">pushname</a></li><li><a href="PrivateContact.html#shortName">shortName</a></li></ul><div class="member-type">Methods</div><ul class="inner"><li><a href="PrivateContact.html#block">block</a></li><li><a href="PrivateContact.html#getAbout">getAbout</a></li><li><a href="PrivateContact.html#getChat">getChat</a></li><li><a href="PrivateContact.html#getProfilePicUrl">getProfilePicUrl</a></li><li><a href="PrivateContact.html#unblock">unblock</a></li></ul></div></li><li><a href="Util.html">Util</a><button type="button" class="hidden toggle-subnav btn btn-link">  <span class="glyphicon glyphicon-plus"></span></button><div class="hidden" id="Util_sub"><div class="member-type">Methods</div><ul class="inner"><li><a href="Util.html#.formatImageToWebpSticker">formatImageToWebpSticker</a></li><li><a href="Util.html#.formatToWebpSticker">formatToWebpSticker</a></li><li><a href="Util.html#.formatVideoToWebpSticker">formatVideoToWebpSticker</a></li><li><a href="Util.html#.mergeDefault">mergeDefault</a></li><li><a href="Util.html#.setFfmpegPath">setFfmpegPath</a></li></ul></div></li></ul></div><div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#ChatTypes">ChatTypes</a></li><li class="hidden"><a href="global.html#ContactId">ContactId</a></li><li><a href="global.html#Events">Events</a></li><li><a href="global.html#GroupNotificationTypes">GroupNotificationTypes</a></li><li class="hidden"><a href="global.html#GroupParticipant">GroupParticipant</a></li><li><a href="global.html#MessageAck">MessageAck</a></li><li class="hidden"><a href="global.html#MessageInfo">MessageInfo</a></li><li class="hidden"><a href="global.html#MessageSendOptions">MessageSendOptions</a></li><li><a href="global.html#MessageTypes">MessageTypes</a></li><li><a href="global.html#Status">Status</a></li><li><a href="global.html#WAState">WAState</a></li></ul></div>
+</nav>
+<div id="resizer"></div>
+
+<div class="main" id="main">
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const Base = require('./Base');
+
+/**
+ * Current connection information
+ * @extends {Base}
+ */
+class ClientInfo extends Base {
+  /**
+   *
+   * @param {Client} client
+   * @param {object} data
+   */
+  constructor(client, data) {
+    super(client);
+
+    if (data) {
+      this._patch(data);
+    }
+  }
+
+  /**
+   * @param {object} data
+   * @return {object}
+   * @private
+   */
+  _patch(data) {
+    /**
+     * Name configured to be shown in push notifications
+     * @type {string}
+     */
+    this.pushname = data.pushname;
+
+    /**
+     * @type {object}
+     * @deprecated Use .wid instead
+     */
+    this.me = data.wid;
+
+    /**
+     * Current user ID
+     * @type {object}
+     */
+    this.wid = data.wid;
+
+    /**
+     * Information about the phone this client is connected to
+     * @type {object}
+     * @property {string} wa_version WhatsApp Version running on the phone
+     * @property {string} os_version OS Version running on the phone (iOS or
+     * Android version)
+     * @property {string} device_manufacturer Device manufacturer
+     * @property {string} device_model Device model
+     * @property {string} os_build_number OS build number
+     */
+    this.phone = data.phone;
+
+    /**
+     * Platform the phone is running on
+     * @type {string}
+     */
+    this.platform = data.platform;
+
+    return super._patch(data);
+  }
+
+  /**
+   * Get current battery percentage and charging status for the attached device
+   * @return {object} batteryStatus
+   * @return {number} batteryStatus.battery - The current battery percentage
+   * @return {boolean} batteryStatus.plugged - Indicates if the phone is plugged
+   * in (true) or not (false)
+   */
+  async getBatteryStatus() {
+    return await this.client.pupPage.evaluate(() => {
+      const {battery, plugged} = window.Store.Conn;
+      return {battery, plugged};
+    });
+  }
+}
+
+module.exports = ClientInfo;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<footer>
+    <img class="logo" src="img/toast-ui.png" style="">
+    <div class="footer-text">NHN Entertainment. Frontend Development Lab</div>
+</footer>
+<script>prettyPrint();</script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/tui-doc.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+    <script>
+        var id = '_sub'.replace(/"/g, '_');
+        var selectedApi = document.getElementById(id); // do not use jquery selector
+        var $selectedApi = $(selectedApi);
+
+        $selectedApi.removeClass('hidden');
+        $selectedApi.parent().find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+        showLnbApi();
+    </script>
+
+</body>
+</html>
