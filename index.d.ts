@@ -843,6 +843,8 @@ declare namespace WAWebJS {
     delete: () => Promise<boolean>,
     /** Loads chat messages, sorted from earliest to latest. */
     fetchMessages: (searchOptions: MessageSearchOptions) => Promise<Message[]>,
+    /** Loads chat messages, sorted from earliest to latest. */
+    fetchMessagesUntil: (limitMsg: Message) => Promise<Message[]>,
     /** Mutes this chat until a specified date */
     mute: (unmuteDate: Date) => Promise<void>,
     /** Send a message to this chat */

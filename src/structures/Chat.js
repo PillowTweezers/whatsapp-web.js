@@ -221,13 +221,12 @@ class Chat extends Base {
 
   /**
    * Loads chat messages, sorted from earliest to latest.
-   * @param {Object} searchOptions Options for searching messages.
-   * @param {Message}
+   * @param {Message} limitMsg
    * @return {Promise<Array<Message>>}
    */
   async fetchMessagesUntil(limitMsg){
     if (!limitMsg) {
-      return;
+      return [];
     }
     let messages = await this.client.pupPage.evaluate(async (chatId, limitMsg) => {
       const msgFilter = m => !m.isNotification; // dont include notification messages
