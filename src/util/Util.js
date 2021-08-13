@@ -7,18 +7,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const webp = require('node-webpmux');
 const fs = require('fs').promises;
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
-
-let sharp;
-const loadSharp = async ()=>{
-  await sleep(5000);
-  sharp = require('sharp');
-}
-loadSharp();
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+const sharp = require('sharp');
 
 /**
  * Utility methods
