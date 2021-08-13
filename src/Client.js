@@ -474,7 +474,7 @@ class Client extends EventEmitter {
       sendMediaAsDocument: options.sendMediaAsDocument,
       caption: options.caption,
       quotedMessageId: options.quotedMessageId,
-      parseVCards: options.parseVCards !== false,
+      parseVCards: options.parseVCards === false ? false : true,
       mentionedJidList: Array.isArray(options.mentions) ? options.mentions.map(contact => contact.id._serialized) : [],
       ...options.extra
     };

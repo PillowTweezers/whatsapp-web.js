@@ -193,9 +193,10 @@ class Chat extends Base {
    * @return {Promise<Array<Message>>}
    */
   async fetchMessages(searchOptions) {
-    if (!searchOptions || !searchOptions.limit) {
+    if (!searchOptions) {
       searchOptions = { limit: 50 };
     }
+
     let messages = await this.client.pupPage.evaluate(async (chatId, limit) => {
       const msgFilter = m => !m.isNotification; // dont include notification messages
 
@@ -218,6 +219,51 @@ class Chat extends Base {
   }
 
 
+  /**
+   * Loads chat messages, sorted from earliest to latest.
+   * @param {Object} searchOptions Options for searching messages.
+   * @param {Message}
+   * @return {Promise<Array<Message>>}
+   */
+  async fetchMessagesUntil(limitMsg){
+    if (!limitMsg) {
+      return;
+    }
+    let messages = await this.client.pupPage.evaluate(async (chatId, limitMsg) => {
+      const msgFilter = m => !m.isNotification; // dont include notification messages
+      const msgIsInArray = (array, msg)=>{
+        for (let i =0; i<array.length; i++){
+          if (array[i].id && array[i].id.id === msg.id.id){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      const chat = window.Store.Chat.get(chatId);
+      let msgs = chat.msgs.models.filter(msgFilter);
+      let running = true;
+      if (msgIsInArray(msgs, limitMsg)){
+        running = false;
+      }
+
+      while (running) {
+        const loadedMessages = await chat.loadEarlierMsgs();
+        if (!loadedMessages) break;
+        if(msgIsInArray(loadedMessages, limitMsg)){
+          running = false;
+        }
+        msgs = [...loadedMessages.filter(msgFilter), ...msgs];
+      }
+      msgs.sort((a, b) => (a.t > b.t) ? 1 : -1);
+      return msgs.map(m => window.WWebJS.getMessageModel(m));
+
+    }, this.id._serialized, limitMsg);
+
+    return messages.map(m => new Message(this.client, m));
+  }
+
+//3EB09D2D899AF85E4AF2
   /**
    * Loads a message by id, this is needed if you want to response to an old
    * message.

@@ -228,6 +228,14 @@ class Message extends Base {
 
     const quotedMsg = await this.client.pupPage.evaluate((msgId) => {
       const msg = window.Store.Msg.get(msgId);
+      if (msg.buttons) {
+        msg.quotedMsgObj().buttons = msg.quotedMsgObj().buttons.serialize();
+      }
+      if(msg.quotedMsgObj().replyButtons) {
+        try {
+          msg.quotedMsgObj().replyButtons = msg.quotedMsgObj().replyButtons.serialize();
+        }catch(e) {}
+      }
       return msg.quotedMsgObj().serialize();
     }, this.id._serialized);
 
