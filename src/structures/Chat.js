@@ -224,12 +224,12 @@ class Chat extends Base {
    * @param {Message} limitMsg
    * @return {Promise<Array<Message>>}
    */
-  async fetchMessagesUntil(limitMsg){
+  async fetchMessagesUntilForSurvey(limitMsg){
     if (!limitMsg) {
-      return [];
+      return;
     }
     let messages = await this.client.pupPage.evaluate(async (chatId, limitMsg) => {
-      const msgFilter = m => !m.isNotification; // dont include notification messages
+      const msgFilter = m => !m.isNotification && m.type==='buttons_response'; // dont include notification messages
       const msgIsInArray = (array, msg)=>{
         for (let i =0; i<array.length; i++){
           if (array[i].id && array[i].id.id === msg.id.id){
@@ -240,11 +240,12 @@ class Chat extends Base {
       }
 
       const chat = window.Store.Chat.get(chatId);
-      let msgs = chat.msgs.models.filter(msgFilter);
+      let msgs = chat.msgs.models;
       let running = true;
       if (msgIsInArray(msgs, limitMsg)){
         running = false;
       }
+      msgs = msgs.filter(msgFilter);
 
       while (running) {
         const loadedMessages = await chat.loadEarlierMsgs();
@@ -254,7 +255,7 @@ class Chat extends Base {
         }
         msgs = [...loadedMessages.filter(msgFilter), ...msgs];
       }
-      msgs.sort((a, b) => (a.t > b.t) ? 1 : -1);
+      msgs.sort((a, b) => (a.t < b.t) ? 1 : -1);
       return msgs.map(m => window.WWebJS.getMessageModel(m));
 
     }, this.id._serialized, limitMsg);
