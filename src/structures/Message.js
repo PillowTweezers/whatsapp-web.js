@@ -30,6 +30,7 @@ class Message extends Base {
    * @private
    */
   _patch(data) {
+    this.quotedMsgId = data.quotedStanzaID;
     if (data.isDynamicReplyButtonsMsg){
       this.isDynamicReplyButtonsMsg = true;
       this.dynamicReplyButtons = data.dynamicReplyButtons;
