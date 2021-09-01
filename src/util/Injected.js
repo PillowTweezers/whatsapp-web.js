@@ -36,6 +36,17 @@ exports.ExposeStore = (moduleRaidStr) => {
   window.Store.QueryOrder = window.mR.findModule('queryOrder')[0];
   window.Store.QueryProduct = window.mR.findModule('queryProduct')[0];
   window.Store.DownloadManager = window.mR.findModule('DownloadManager')[0].default;
+  window.Store.Call = window.mR.findModule('CallCollection')[0].default;
+
+
+  if(!window.Store.Chat._find) {
+    window.Store.Chat._find = e => {
+      const target = window.Store.Chat.get(e);
+      return target ? Promise.resolve(target) : Promise.resolve({
+        id: e
+      });
+    };
+  }
 };
 
 exports.LoadUtils = () => {

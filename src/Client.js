@@ -379,6 +379,7 @@ class Client extends EventEmitter {
       window.Store.Msg.on('remove', (msg) => { if (msg.isNewMsg) window.onRemoveMessageEvent(window.WWebJS.getMessageModel(msg)); });
       window.Store.AppState.on('change:state', (_AppState, state) => { window.onAppStateChangedEvent(state); });
       window.Store.Conn.on('change:battery', (state) => { window.onBatteryStateChangedEvent(state); });
+      window.Store.Call.on('add', (call) => { window.onIncomingCall(call); });
     });
 
     /**
